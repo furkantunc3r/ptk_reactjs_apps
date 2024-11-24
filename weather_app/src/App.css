@@ -1,0 +1,97 @@
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #f8f9fa;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    flex-wrap: wrap;
+}
+
+ul {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.day-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: calc(100% / 7 - 20px);
+    height: 180px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.day-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.current-day {
+    border: 2px solid #007bff;
+}
+
+.day-container p {
+    margin: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+}
+
+.degree-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.degree-container p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.degree-container p:first-child {
+    color: #ff5722;
+}
+
+.degree-container p:last-child {
+    color: #2196f3;
+}
+
+@media (max-width: 768px) {
+    .forecast-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .day-container {
+        width: 120px;
+        height: 160px;
+    }
+
+    .day-container p {
+        font-size: 14px;
+    }
+
+    .degree-container p {
+        font-size: 12px;
+    }
+}
